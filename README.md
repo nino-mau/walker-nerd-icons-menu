@@ -1,8 +1,9 @@
-# Elephant Nerd Icons
+# Walker Nerd Icons Menu
 
 ![Illustration](./assets/illustration.jpg)
 
-Custom [Elephant](https://github.com/abenz1267/elephant) menu for searching Nerd Font glyphs and copying the selected icon to clipboard.
+Custom [Walker](https://github.com/abenz1267/walker) provider for searching Nerd Font glyphs and copying the selected icon to clipboard.
+Built as a custom [elephant's menus](https://github.com/abenz1267/elephant/tree/master/internal/providers/menus).
 
 ## Prerequisites
 
