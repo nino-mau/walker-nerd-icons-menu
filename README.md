@@ -1,6 +1,8 @@
 # Elephant Nerd Icons
 
-Minimal [Elephant](https://github.com/abenz1267/elephant) menu for searching Nerd Font glyphs and copying the selected icon to clipboard.
+![Illustration](./assets/illustration.jpg)
+
+Custom [Elephant](https://github.com/abenz1267/elephant) menu for searching Nerd Font glyphs and copying the selected icon to clipboard.
 
 ## Prerequisites
 
@@ -27,7 +29,7 @@ Add a prefix in your Walker config (`~/.config/walker/config.toml`):
 
 ```toml
 [[providers.prefixes]]
-prefix = "nf"
+prefix = "$" # Can be anything
 provider = "menus:nerd-icons"
 ```
 
@@ -35,10 +37,13 @@ Restart Walker and Elephant after configuration.
 
 ## Usage
 
-- Type your prefix (`nf`) followed by a query
+- Launch walker
+- Type your prefix (`$`) followed by a query
 - Search by icon name (example: `cod-arrow`)
-- Search by codepoint (example: `f101` or `u+f101`)
 - Press `Enter` to copy the glyph
+
+> [!TIP]
+> You can launch the menu directly with `walker --provider menus:nerd-icons`
 
 ## Data source
 
