@@ -8,6 +8,11 @@ Description = "Search Nerd Font icons and copy glyph"
 SearchName = true
 KeepOpen = true
 
+Actions = {
+	copy_glyph = "wl-copy %VALUE%",
+	type_glyph = "lua:TypeGlyph",
+}
+
 local HOME = os.getenv("HOME") or "."
 local CACHE_DIR = HOME .. "/.cache/elephant/nerd-icons"
 local GLYPH_FILE = CACHE_DIR .. "/glyphnames.json"
@@ -101,6 +106,13 @@ local function ensureGlyphJson()
 	end
 
 	return nil
+end
+
+function TypeGlyph(value)
+	if not value or value == "" then
+		return
+	end
+	os.execute("wtype -- " .. shellEscape(value))
 end
 
 local function utf8FromCodepoint(code)
