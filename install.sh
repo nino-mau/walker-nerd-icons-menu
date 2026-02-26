@@ -25,6 +25,15 @@ echo "=== Installing Elephant Nerd Icons ==="
 echo "Version: $VERSION"
 echo
 
+# Configure Walker
+if [[ -f "$SCRIPT_DIR/configure_walker.sh" ]]; then
+  echo "Configuring Walker..."
+  "$SCRIPT_DIR/configure_walker.sh"
+else
+  echo -e "${RED}Error: configure_walker.sh not found${NC}"
+  exit 1
+fi
+
 if [[ ! -f "$SOURCE_FILE" ]]; then
   echo -e "${RED}Error: nerd-icons.lua not found in $SCRIPT_DIR${NC}"
   exit 1
